@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+    --primary-text: hsl(184, 14%, 56%);
+    --highlight: hsl(172, 67%, 45%);
+    --primary-bg: hsl(183, 100%, 15%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body, html {
+    background-color: hsl(185, 41%, 84%);
+    color: var(--primary-text);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+main {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    max-width: 924px;
+    margin: 0 auto;
+}
+
+section {
+    padding-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin: 0.4em 0;
+    font-size: 0.9rem;
+}
+
+input {
+    background-color: hsl(189, 41%, 97%);
+    color: var(--primary-bg);
+    border: none;
+    text-align: right;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#tipPercent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#tipPercent button, #tipPercent input {
+    width: 150px;
+    height: 45px;
+    font-size: 1.3rem;
+}
+
+#tipPercent button {
+    background-color: var(--primary-bg);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tipPercent button:hover {
+    background: hsl(183, 100%, 24%);
+}
+
+#active {
+    background-color: var(--highlight) !important;
+    color: var(--primary-bg) !important;
+}
+
+#result {
+    background-color: var(--primary-bg);
+    padding: 2em;
+    border-radius: 15px;
+}
+
+#result > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+#result h2 {
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+#result p {
+    font-size: 0.7rem;
+}
+
+#result span {
+    font-size: 2rem;
+    color: var(--highlight);
+}
+
+#result button {
+    background-color: var(--highlight);
+    color: var(--primary-bg);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 0.4em;
+    padding: 0.4em 0;
+    cursor: pointer;
+}
+
+#result button:hover {
+    background-color: hsl(172, 76%, 45%);
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container img {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        padding: 4rem 0;
+    }
+
+    main {
+        display: flex;
+        gap: 1em;
+        border-radius: 25px;
+    }
+
+    input[type="text"] {
+        width: 95%;
+    }
+
+    #tipPercent button, #tipPercent input {
+        width: 120px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    #result, #inputs {
+        width: 50%;
+    }
+
+    #result {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #result span {
+        font-size: 2.5rem;
+    }
+}

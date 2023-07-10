@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>SPLITTER | Tip Calculator</title>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="">
+  </header>
+  <main>
+    <div id="inputs">
+      <section>
+        <label for="bill">Bill</label>
+        <div class="input-container">
+          <img src="images/icon-dollar.svg">
+          <input type="number" name="bill" id="bill" placeholder="0">
+        </div>
+      </section>
+      <section>
+        <label>Select Tip %</label>
+        <div id="tipPercent">
+          <button onclick="changePercentage(5); setActive(this);">5%</button>
+          <button onclick="changePercentage(10); setActive(this);">10%</button>
+          <button onclick="changePercentage(15); setActive(this);">15%</button>
+          <button onclick="changePercentage(25); setActive(this);">25%</button>
+          <button onclick="changePercentage(50); setActive(this);">50%</button>
+          <input onchange="changePercentage(this.value)" type="number" name="custom" id="custom" placeholder="Custom">
+        </div>
+      </section>
+      <section>
+        <label for="people">Number of People</label>
+        <div class="input-container">
+          <img src="images/icon-person.svg">
+          <input type="number" name="people" id="people" value="1">
+        </div>
+      </section>
+    </div>
+    <section id="result">
+      <div>
+        <div>
+          <div>
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <span id="tipAmount">$0.00</span>
+        </div>
+        <div>
+          <div>
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <span id="totalAmount">$0.00</span>
+        </div>
+      </div>
+      <button onclick="reset()">RESET</button>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
